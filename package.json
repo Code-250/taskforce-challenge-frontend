@@ -1,5 +1,8 @@
 {
   "name": "taskforce-challenge-frontend",
+  "jest":{
+    "verbose":true
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -32,7 +35,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "docs": "jsdoc -c jsdoc.config.json",
-    "test": "jest --verbose --coverage",
+    "test": "jest --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -52,5 +55,21 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "transform": {
+    "\\.js$": "<rootDir>/node_modules/babel-jest"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/node": "^7.14.9",
+    "@babel/plugin-syntax-jsx": "^7.14.5",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-react": "^7.14.5",
+    "babel-jest": "^26.6.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "enzyme-to-json": "^3.6.2",
+    "react-test-renderer": "^17.0.2"
   }
 }
